@@ -1,0 +1,15 @@
+import boto3  
+
+# Create EC2 client  
+ec2 = boto3.client('ec2', region_name='us-east-1')  
+
+# Launch instance  
+response = ec2.run_instances(  
+    ImageId='ami-0ab0',  # Replace with your OS/AMI ID  
+    InstanceType='t2.micro',  
+    KeyName='your-key-pair',  # Replace with your key pair  
+    MinCount=1,  
+    MaxCount=1  
+)  
+
+print(f"Instance launched: {response['Instances'][0]['InstanceId']}")  
