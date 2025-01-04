@@ -10,6 +10,6 @@ response = ec2.run_instances(
     KeyName='your-key-pair',  # Replace with your key pair  
     MinCount=1,  
     MaxCount=1  
-)  
+) 
 
 print(f"Instance launched: {response['Instances'][0]['InstanceId']}")  
