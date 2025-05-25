@@ -18,7 +18,7 @@ response = ec2.run_instances(
             'Tags': [{'Key': 'Name', 'Value': 'MyEC2Instance'}]
         }
     ]
-)
+)           
 
 # Print instance details
 for instance in response['Instances']:
